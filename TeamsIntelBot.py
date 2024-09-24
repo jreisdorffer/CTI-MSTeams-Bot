@@ -278,7 +278,7 @@ def GetRedFlagDomains():
             for p in div.find_all("p"):
                 #OutputMessage = re.sub("[\[\]]", "", (p.get_text()))
                 OutputMessage = re.sub(r"[\[\]]", "", (p.get_text()))
-            Title = "🚩 Red Flag Domains créés ce jour (" +  str(today) + ")"
+            Title = "🚩 Red Flag Domains created today (" +  str(today) + ")"
             FileConfig.set('Misc', "redflagdomains", str(today))
             if options.Debug:
                 print(Title)
